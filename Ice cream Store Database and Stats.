@@ -1,0 +1,25 @@
+--Create a grocery store database
+CREATE table icecreamstore( id INTEGER Primary Key, Flavor Text, Quantity INTEGER, Price INTEGER, ScoopsPerServing INTEGER);
+
+INSERT INTO icecreamstore VALUES (1, "Chocolate", 8, 3.4, 2);
+INSERT INTO icecreamstore VALUES (2, "Vanilla", 12, 2.8, 2);
+INSERT INTO icecreamstore VALUES (3, "Strawberry", 23, 3.5, 2);
+INSERT INTO icecreamstore VALUES (4, "Mint Chocolate Chip", 30, 4.0, 3);
+INSERT INTO icecreamstore VALUES (5, "Butter Pecan", 28, 4.0, 3);
+INSERT INTO icecreamstore VALUES (6, "Cookie Dough",30, 3.0,3);
+INSERT INTO icecreamstore VALUES (7, "Cookies and Cream", 40, 3.8, 3);
+INSERT INTO icecreamstore VALUES (8, "Rocky Road", 18, 3.9, 3);
+INSERT INTO icecreamstore VALUES(9, "Coffee", 32, 3.7, 3);
+INSERT INTO icecreamstore VALUES(10, "Cotton Candy", 26, 2.9, 3);
+INSERT INTO icecreamstore VALUES (11, "Pistachio", 26, 3.0, 3);
+INSERT INTO icecreamstore VALUES (12, "Cake Batter", 19, 3.5, 3);
+INSERT INTO icecreamstore VALUES (13, "Salted Caramel", 9, 3.7, 3);
+INSERT INTO icecreamstore VALUES (14, "Butter Scotch", 19, 3.9, 4);
+INSERT INTO icecreamstore VALUES (15, "Raspberry", 38, 3.0, 3);
+
+--display the database ordered by price. 
+SELECT * FROM icecreamstore
+ORDER BY price desc;
+
+-- which flavor has most in stock?
+SELECT flavor, MAX(QUANTITY) from icecreamstore;
